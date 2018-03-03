@@ -10,8 +10,9 @@
   min-height: 400px;
 }
 
-.footer {
-  background-color: #D1C4E9;
+footer {
+  background-color: #C3E5E8;
+  color: #136E76;
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
 }
@@ -19,12 +20,29 @@
 .jumbotron {
   padding: 70px 30px 70px 30px;
   margin: 0px auto;
-  background: #9575CD;
+  background: #55A2A9;
   color: floralwhite;
 }
 
-.address {
+address {
   font-size: 80%;
   margin: 0px;
   color: #0F0F0F;
+}
+
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+
+.navbar-inverse {
+  background-color: #136E76;
+}
+
+a {
+  color: #CB4474;
+}
+
+h3{
+    margin: 20px auto;
 }
