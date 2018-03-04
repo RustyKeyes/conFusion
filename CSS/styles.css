@@ -10,7 +10,7 @@
   min-height: 400px;
 }
 
-footer {
+.footer {
   background-color: #C3E5E8;
   color: #136E76;
   margin: 0px auto;
@@ -43,6 +43,6 @@ a {
   color: #CB4474;
 }
 
-h3{
+h2 {
     margin: 20px auto;
 }
