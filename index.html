@@ -43,7 +43,7 @@
     <div class="modal fade" role="dialog" id="loginModal">
       <div class="modal-dialog" role="content">
         <div class="modal-content">
-          <div class="modal-header">
+          <div class="modal-header bg-info text-white">
             <h4 class="modal-title">Login</h4>
             <button class="close" type="button" data-dismiss="modal">&times;</button>
           </div>
@@ -81,6 +81,127 @@
       </div>
     </div>
 
+    <div class="modal fade" role="dialog" id="reserveModal">
+      <div class="modal-dialog modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header bg-warning text-white">
+            <h4 class="modal-title">Reserve a Table</h4>
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form>
+
+              <div class="row form-group pb-1">
+                <label class="col-md-2 col-form-label align-self-center" for="groupname">Group Name</label>
+                <div class="col-md-10 align-self-center">
+                  <input class="form-control" type="text" id="groupname" name="groupname" placeholder="Group Name"></input>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <label class="col-md-2 col-form-label align-self-center" for="guests">Number of Guests</label>
+                <div class="col align-self-center">
+
+                      <strong>
+                        <label class="pr-2" for="guestRadio1">
+                          <input type="radio" name="guests" id="guestRadio1" value="1"></input>
+                          1
+                        </label>
+                        <label class="px-2" for="guestRadio2">
+                          <input type="radio" name="guests" id="guestRadio2" value="2"></input>
+                          2
+                        </label>
+                        <label class="px-2" for="guestRadio3">
+                          <input type="radio" name="guests" id="guestRadio3" value="3"></input>
+                          3
+                        </label>
+                        <label class="px-2" for="guestRadio4">
+                          <input type="radio" name="guests" id="guestRadio4" value="4"></input>
+                          4
+                        </label>
+                        <label class="px-2" for="guestRadio5">
+                          <input type="radio" name="guests" id="guestRadio5" value="5"></input>
+                          5
+                        </label>
+                        <label class="px-2" for="guestRadio6">
+                          <input type="radio" name="guests" id="guestRadio6" value="6"></input>
+                          6
+                        </label>
+                      </strong>
+
+                </div>
+              </div>
+
+              <div class="row form-group pb-2">
+                <label class="col-md-2 col-form-label align-self-center" for="smoking">Section</label>
+                <div class="col align-self-center">
+
+                    <div class="input-group" data-toggle="buttons">
+                        <label class="btn btn-success input-group-addon active" for="smokeRadio1">
+                          <input class="form-control" type="radio" name="smoking" id="smokeRadio1" value="no" autocomplete="off" checked></input>
+                          Non-Smoking
+                        </label>
+                        <label class="btn btn-danger input-group-addon" for="smokeRadio2">
+                          <input class="form-control" type="radio" name="smoking" id="smokeRadio2" value="yes" autocomplete="off"></input>
+                          Smoking
+                        </label>
+                        <label class="btn btn-primary input-group-addon" for="smokeRadio3">
+                          <input class="form-control" type="radio" name="smoking" id="smokeRadio3" value="maybe" autocomplete="off"></input>
+                          Mystery
+                        </label>
+                    </div>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <label class="col-md-2 col-form-label align-self-center" for="date">Date and Time</label>
+
+                <div class="col-sm-5 align-self-center">
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input class="form-control" type="text" id="date" name="date" placeholder="Date"></input>
+                  </div>
+                </div>
+
+                <div class="col-sm-5 align-self-center">
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-clock-o fa-sm"></i>
+                    </div>
+                    <input class="form-control" type="text" id="time" name="time" placeholder="Time"></input>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="row form-group">
+                <label class="col-md-2 col-form-label align-self-center" for="telnum">Contact Phone</label>
+                <div class="col align-self-center">
+                  <div class="input-group">
+                    <div class="input-group-addon">
+                      (
+                    </div>
+                    <input class="col-3 form-control" type="tel" id="areacode" name="areacode" placeholder="Area Code"></input>
+                    <div class="input-group-addon">
+                      )
+                    </div>
+                    <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Phone Number"></input>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" type="button" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" type="submit" data-dismiss="modal">Reserve</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header justify-content-between">
@@ -91,9 +212,12 @@
           <div class="col col-md-6 col-lg-4 align-self-center text-center">
             &nbsp;&nbsp;&nbsp;<img src="img/logo.png" class="img-fluid align-self-center">
             <br><br>
+            <a class="btn btn-warning btn-lg btn-block" data-toggle="modal" data-target="#reserveModal">
+              Reserve Table
+            </a> <!--
             <a class="btn btn-warning btn-lg btn-block" role="button" data-toggle="tooltip" data-html="true" title="or call us at<br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserve">
               Reserve Table
-            </a>
+            </a> -->
           </div>
         </div>
       </div>
@@ -107,14 +231,14 @@
               <div class="carousel-item active">
                 <img class="d-block img-fluid" src="img/uthappizza.png" alt="uthappizza">
                 <div class="carousel-caption d-none d-md-block">
-                  <h2>Uthappizza <nobr><span class="badge badge-danger">HOT</span> <span class="badge badge-pill badge-default">$4.99</span></nobr></h2>
+                  <h2>Uthappizza</h2>
                   <p class="hidden-xs-down">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
                 </div>
               </div>
               <div class="carousel-item">
                 <img class="d-block img-fluid" src="img/buffet.png" alt="buffet">
                 <div class="carousel-caption d-none d-md-block">
-                  <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
+                  <h2>Weekend Grand Buffet</h2>
                   <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>
                 </div>
               </div>
@@ -138,6 +262,14 @@
             <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
               <i class="carousel-control-next-icon"></i>
             </a>
+            <div class="btn-group" id="carouselButtons">
+              <button class="btn btn-danger btn-small" id="carouselPause">
+                <i class="fa fa-pause"></i>
+              </button>
+              <button class="btn btn-danger btn-small" id="carouselPlay">
+                <i class="fa fa-play"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -167,7 +299,7 @@
               <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
               <p class="hidden-xs-down">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>
             </div>
-            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
+            <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
           </div>
         </div>
         <br>
@@ -188,112 +320,6 @@
           </div>
         </div>
         <br>
-      </div>
-
-      <div class="row row-content" id="reserve">
-        <div class="col-12 col-sm-8 mx-auto">
-
-          <div class="card">
-            <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-            <div class="card-block">
-
-              <form>
-
-                <div class="row form-group">
-                  <label class="col-md-2 col-form-label align-self-center" for="groupname">Group Name</label>
-                  <div class="col-md-10 align-self-center">
-                    <input class="form-control" type="text" id="groupname" name="groupname" placeholder="Group Name"></input>
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <label class="col-md-2 col-form-label align-self-center" for="guests">Number of Guests</label>
-                  <div class="col-md-6 form-check form-check-inline align-self-center">
-
-                        <strong>
-                          <label class="form-check-label" for="guestRadio1">
-                            <input class="form-check-input" type="radio" name="guests" id="guestRadio1" value="1"></input>
-                            1
-                          </label>
-                          <label class="form-check-label" for="guestRadio2">
-                            <input class="form-check-input" type="radio" name="guests" id="guestRadio2" value="2"></input>
-                            2
-                          </label>
-                          <label class="form-check-label" for="guestRadio3">
-                            <input class="form-check-input" type="radio" name="guests" id="guestRadio3" value="3"></input>
-                            3
-                          </label>
-                          <label class="form-check-label" for="guestRadio4">
-                            <input class="form-check-input" type="radio" name="guests" id="guestRadio4" value="4"></input>
-                            4
-                          </label>
-                          <label class="form-check-label" for="guestRadio5">
-                            <input class="form-check-input" type="radio" name="guests" id="guestRadio5" value="5"></input>
-                            5
-                          </label>
-                          <label class="form-check-label" for="guestRadio6">
-                            <input class="form-check-input" type="radio" name="guests" id="guestRadio6" value="6"></input>
-                            6
-                          </label>
-                        </strong>
-
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <label class="col-md-2 col-form-label align-self-center" for="date">Date and Time</label>
-
-                  <div class="col-sm-5 align-self-center">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-calendar"></i>
-                      </div>
-                      <input class="form-control" type="text" id="date" name="date" placeholder="Date"></input>
-                    </div>
-                  </div>
-
-                  <div class="col-sm-5 align-self-center">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        <i class="fa fa-clock-o fa-sm"></i>
-                      </div>
-                      <input class="form-control" type="text" id="time" name="time" placeholder="Time"></input>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div class="row form-group">
-                  <label class="col-md-2 col-form-label align-self-center" for="telnum">Contact Phone</label>
-                  <div class="col align-self-center">
-                    <div class="input-group">
-                      <div class="input-group-addon">
-                        (
-                      </div>
-                      <input class="col-3 form-control" type="tel" id="areacode" name="areacode" placeholder="Area Code"></input>
-                      <div class="input-group-addon">
-                        )
-                      </div>
-                      <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Phone Number"></input>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row form-group">
-                  <div class="offset-md-2 col-md-10">
-                    <br>
-                    <button type="submit" class="btn btn-primary">
-                      Reserve
-                    </button>
-                  </div>
-                </div>
-
-              </form>
-
-            </div>
-          </div>
-
-        </div>
       </div>
 
     </div>
@@ -348,10 +374,15 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/tether/dist/js/tether.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
   <script>
     $(document).ready(function(){
-      $('[data-toggle="tooltip"]').tooltip();
+      $("#myCarousel").carousel({interval: 2000});
+      $("#carouselPause").click(function(){
+        $("#myCarousel").carousel('pause');
+      });
+      $("#carouselPlay").click(function(){
+        $("#myCarousel").carousel('cycle');
+      });
     });
   </script>
 
