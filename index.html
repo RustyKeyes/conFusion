@@ -260,16 +260,11 @@
               <i class="carousel-control-prev-icon"></i>
             </a>
             <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-              <i class="carousel-control-next-icon"></i>
+              <span class="carousel-control-next-icon"></span>
             </a>
-            <div class="btn-group" id="carouselButtons">
-              <button class="btn btn-danger btn-small" id="carouselPause">
+              <button class="btn btn-danger btn-small" id="carouselButton">
                 <i class="fa fa-pause"></i>
               </button>
-              <button class="btn btn-danger btn-small" id="carouselPlay">
-                <i class="fa fa-play"></i>
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -375,13 +370,26 @@
   <script src="node_modules/tether/dist/js/tether.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
-    $(document).ready(function(){
-      $("#myCarousel").carousel({interval: 2000});
-      $("#carouselPause").click(function(){
-        $("#myCarousel").carousel('pause');
+    $(document).ready(function()
+    {
+      $("#myCarousel").carousel(
+      {
+        interval: 2000
       });
-      $("#carouselPlay").click(function(){
-        $("#myCarousel").carousel('cycle');
+      $("#carouselButton").click(function()
+      {
+        if($("#carouselButton").children("i").hasClass("fa-pause"))
+        {
+          $("#myCarousel").carousel('pause');
+          $("#carouselButton").children("i").removeClass("fa-pause");
+          $("#carouselButton").children("i").addClass("fa-play");
+        }
+        else if($("#carouselButton").children("i").hasClass("fa-play"))
+        {
+          $("#myCarousel").carousel('cycle');
+          $("#carouselButton").children("i").removeClass("fa-play");
+          $("#carouselButton").children("i").addClass("fa-pause");
+        }
       });
     });
   </script>
