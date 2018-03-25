@@ -8,10 +8,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- endbuild -->
 
     <title>Ristorante Con Fusion: About Us</title>
   </head>
@@ -366,32 +368,11 @@
   </body>
 
   <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  <!-- build:js js/main.js -->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/tether/dist/js/tether.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function()
-    {
-      $("#myCarousel").carousel(
-      {
-        interval: 2000
-      });
-      $("#carouselButton").click(function()
-      {
-        if($("#carouselButton").children("i").hasClass("fa-pause"))
-        {
-          $("#myCarousel").carousel('pause');
-          $("#carouselButton").children("i").removeClass("fa-pause");
-          $("#carouselButton").children("i").addClass("fa-play");
-        }
-        else if($("#carouselButton").children("i").hasClass("fa-play"))
-        {
-          $("#myCarousel").carousel('cycle');
-          $("#carouselButton").children("i").removeClass("fa-play");
-          $("#carouselButton").children("i").addClass("fa-pause");
-        }
-      });
-    });
-  </script>
+  <script src="js/scripts.js"></script>
+  <!-- endbuild -->
 
 </html>
